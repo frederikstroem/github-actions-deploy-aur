@@ -91,12 +91,12 @@ fi
 
 if [ "$update_pkgver" = "true" ]; then
   echo '::group::Updating pkgver'
-  echo 'Running `makepkg -od` to update pkgver'
+  echo 'Running `makepkg --nobuild --nodeps --nocheck --noprepare` to update pkgver'
 
   # Update the pkgver in a temp folder
   tmp_makepkg=$(mktemp -d)
   cp -r /tmp/local-repo/. $tmp_makepkg
-  (cd $tmp_makepkg && makepkg -od)
+  (cd $tmp_makepkg && makepkg --nobuild --nodeps --nocheck --noprepare)
 
   # Copy the PKGBUILD back
   cp $tmp_makepkg/PKGBUILD /tmp/local-repo/

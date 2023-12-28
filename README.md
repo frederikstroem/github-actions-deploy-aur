@@ -63,7 +63,7 @@ Glob patterns will be expanded by bash when copying the files to the repository.
 
 ### `update_pkgver`
 
-**Optional** Run `makepkg -od` to update `pkgver`. Requires that the `pkgver()` function defined in the `PKGBUILD` file doesn't required any dependencies other than git. The default value is `false`.
+**Optional** Run `makepkg --nobuild --nodeps --nocheck --noprepare` to update `pkgver`. Requires that the `pkgver()` function defined in the `PKGBUILD` file doesn't required any dependencies other than git. The default value is `false`.
 
 ## Example usage
 
