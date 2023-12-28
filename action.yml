@@ -1,4 +1,4 @@
-name: 'Publish AUR package'
+name: 'Publish AUR package - pkgver fork'
 description: 'Publish an AUR package'
 author: KSXGitHub
 branding:
