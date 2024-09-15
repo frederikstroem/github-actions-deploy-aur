@@ -47,7 +47,7 @@ inputs:
   allow_empty_commits:
     description: 'Allow empty commits, i.e. commits with no change.'
     required: false
-    default: 'true'
+    default: 'false'
   force_push:
     description: 'Use --force when push to the AUR.'
     required: false
@@ -55,7 +55,7 @@ inputs:
   ssh_keyscan_types:
     description: 'Comma-separated list of types to use when adding aur.archlinux.org to known hosts'
     required: false
-    default: 'rsa,dsa,ecdsa,ed25519'
+    default: 'rsa,ecdsa,ed25519'
   update_pkgver:
     description: "Run `makepkg -od` to update `pkgver`. Requires that the `pkgver()` function defined in the `PKGBUILD` file doesn't required any dependencies other than git"
     required: false
